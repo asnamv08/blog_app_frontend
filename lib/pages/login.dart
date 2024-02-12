@@ -1,3 +1,4 @@
+import 'package:blogapp/pages/signup.dart';
 import 'package:flutter/material.dart';
 
 class login extends StatefulWidget {
@@ -19,7 +20,9 @@ class _loginState extends State<login> {
         SizedBox(height: 10,),
         ElevatedButton(onPressed: (){}, child: Text("Login")),
         SizedBox(height: 10,),
-        ElevatedButton(onPressed: (){}, child: Text("New Users Click Here"))
+        ElevatedButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder:(context)=>signup()));
+        }, child: Text("New Users Click Here"))
 
       ],),),
     );
